@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.veryness.working.DrawerFragment;
 import com.example.veryness.working.FirstSurfaceFragment;
 
 public class WorkingActivity extends AppCompatActivity {
@@ -20,7 +21,6 @@ public class WorkingActivity extends AppCompatActivity {
         }else{
             //TODO: savedInstanceState
         }
-
         //in portrait button is Button, but in landscape is ImageButton
         findViewById(R.id.button1).setOnClickListener(myOnClickListener);
         findViewById(R.id.button2).setOnClickListener(myOnClickListener);
@@ -51,12 +51,16 @@ public class WorkingActivity extends AppCompatActivity {
     private void buildFragment(int fragmentNum){
         switch (fragmentNum){
             case 0:
+
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, FirstSurfaceFragment.newInstance())
                         .commitNow();
                 break;
-//            case 1:   //TODO: make fragment     ("CharacterChoosingFragment")
-//                break;
+            case 1:   //TODO: make fragment     ("CharacterChoosingFragment")
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container, DrawerFragment.newInstance())
+                        .commitNow();
+                break;
 //            case 2:   //TODO: make fragment     ("ExportFragment")
 //                break;
 //            //TODO: make other fragments

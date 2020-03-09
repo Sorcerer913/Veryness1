@@ -1,5 +1,6 @@
 package com.example.veryness.working;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +10,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.veryness.R;
 
-public class FirstSurfaceFragment extends Fragment {
+public class DrawerFragment extends Fragment {
 
-    public static FirstSurfaceFragment newInstance() {
-        return new FirstSurfaceFragment();
+    DrawerSurface drawerSurface;
+
+    public static DrawerFragment newInstance() {
+        return new DrawerFragment();
     }
 
     @Nullable
@@ -23,7 +25,8 @@ public class FirstSurfaceFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         //return inflater.inflate(R.layout.first_surface_fragment, container, false);
-        return new SurfaceFractal(super.getContext());
+        drawerSurface = new DrawerSurface(super.getContext(), 1200, 1200, Bitmap.Config.ALPHA_8);
+        return drawerSurface;
     }
 
     @Override
@@ -53,8 +56,7 @@ public class FirstSurfaceFragment extends Fragment {
 
     @Override
     public void onDestroy() {
+        drawerSurface.getDrawerThread().requestStop();
         super.onDestroy();
     }
 }
-
-

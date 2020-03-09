@@ -8,6 +8,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 class SurfaceFractal extends SurfaceView implements SurfaceHolder.Callback {
+
     final String TAG = "TEST_SPACE";
 
     public SurfaceFractal(Context context) {
@@ -18,7 +19,7 @@ class SurfaceFractal extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        new SurfaceFractal.drawThread(holder).start();
+        new DrawThread(holder).start();
 
     }
 
@@ -32,14 +33,16 @@ class SurfaceFractal extends SurfaceView implements SurfaceHolder.Callback {
 
     }
 
-    class drawThread extends Thread {
+    class DrawThread extends Thread {
+
         private SurfaceHolder surfaceHolder;
-        private volatile boolean running = true;
+        private volatile boolean running;
         Paint paint1 = new Paint();
         Paint paint2 = new Paint();
 
-        public drawThread(SurfaceHolder surfaceHolder) {
+        public DrawThread(SurfaceHolder surfaceHolder) {
             this.surfaceHolder = surfaceHolder;
+            running = true;
         }
 
         public void requestStop() {
