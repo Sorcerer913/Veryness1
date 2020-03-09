@@ -1,4 +1,4 @@
-package com.example.veryness.main;
+package com.example.veryness.working;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,12 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class MainFragment extends Fragment {
+public class FirstSurfaceFragment extends Fragment {
 
     private MainViewModel mViewModel;
 
-    public static MainFragment newInstance() {
-        return new MainFragment();
+    public static FirstSurfaceFragment newInstance() {
+        return new FirstSurfaceFragment();
     }
 
     @Nullable

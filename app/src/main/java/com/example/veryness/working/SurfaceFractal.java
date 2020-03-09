@@ -1,4 +1,4 @@
-package com.example.veryness.main;
+package com.example.veryness.working;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -18,7 +18,7 @@ class SurfaceFractal extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        new com.example.veryness.main.SurfaceFractal.drawThread(holder).start();
+        new SurfaceFractal.drawThread(holder).start();
 
     }
 
