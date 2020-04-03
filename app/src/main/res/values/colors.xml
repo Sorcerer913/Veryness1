@@ -4,5 +4,5 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="activity_color">#FF5733 </color>
-    <color name="fragment_color">#FFFFFF</color>
+    <color name="white_color">#FAFAFA</color>
 </resources>

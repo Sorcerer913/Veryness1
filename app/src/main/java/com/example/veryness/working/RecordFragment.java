@@ -11,10 +11,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.veryness.R;
 
-public class FirstSurfaceFragment extends Fragment {
+public class RecordFragment extends Fragment {
 
-    public static FirstSurfaceFragment newInstance() {
-        return new FirstSurfaceFragment();
+    public static RecordFragment newInstance() {
+        return new RecordFragment();
     }
 
     @Nullable
@@ -22,9 +22,9 @@ public class FirstSurfaceFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        //return inflater.inflate(R.layout.first_surface_fragment, container, false);
-        return new SurfaceFractal(super.getContext());
-    }
+        return inflater.inflate(R.layout.first_surface_fragment, container, false);
+
+        }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -53,8 +53,8 @@ public class FirstSurfaceFragment extends Fragment {
 
     @Override
     public void onDestroy() {
+        //drawerSurface.getDrawerThread().requestStop();
         super.onDestroy();
     }
+
 }
-
-

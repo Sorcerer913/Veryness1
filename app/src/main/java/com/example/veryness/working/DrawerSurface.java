@@ -9,8 +9,6 @@ import android.view.MotionEvent;
 import android.view.SurfaceView;
 import android.view.SurfaceHolder;
 
-import java.io.File;
-
 class DrawerSurface extends SurfaceView implements SurfaceHolder.Callback {     //Pixel drawer
 
 
@@ -99,7 +97,7 @@ class DrawerSurface extends SurfaceView implements SurfaceHolder.Callback {     
 
         @Override
         public void run() {
-            while (running){
+            /*while (running){
             Canvas canvas = holder.lockCanvas();
 
                 paint.setColor(Color.BLACK);
@@ -115,7 +113,7 @@ class DrawerSurface extends SurfaceView implements SurfaceHolder.Callback {     
                     //...
                 }
                 holder.unlockCanvasAndPost(canvas);
-            }
+            }*/
 
         }
 

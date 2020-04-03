@@ -13,7 +13,7 @@
     
     <FrameLayout
         android:id="@+id/container"
-        android:background="@color/fragment_color"
+        android:background="@color/white_color"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -36,24 +36,24 @@
         <ImageButton
             android:id="@+id/button3"
             android:src="@drawable/abc_vector_test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Hello"/>
 
         <ImageButton
             android:id="@+id/button2"
-            android:src="@drawable/abc_vector_test"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:src="@android:drawable/ic_menu_edit"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:text="Hello"/>
         <ImageButton
             android:id="@+id/button1"
             android:src="@drawable/abc_vector_test"
             android:elegantTextHeight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Hello"/>
 

@@ -5,9 +5,10 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/fragment_color</item>
-        <item name="buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
-        <item name="imageButtonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+        <item name="colorAccent">@color/colorAccent</item>
+<!--        <item name="android:textColor">@color/white_color</item>-->
+        <item name="buttonStyle">@android:style/Widget.Material.Button.Borderless</item>
+        <item name="imageButtonStyle">@android:style/Widget.Material.Button.Borderless</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

@@ -1,8 +1,6 @@
 package com.example.veryness.working.object;
 
 public class AnimationParameters {
-
-    private String videoFormat;
     //private String encoding
     private int height;
     private int width;
@@ -16,38 +14,38 @@ public class AnimationParameters {
     *
     *
     */
-    private AnimationParameters(){}
-
-    public void setParams(
-            String videoFormat,
-            int height,
-            int width,
-            int fps
-    ){
-        this.videoFormat = videoFormat;
+    public AnimationParameters(int width, int height, int fps){
         this.height = height;
         this.width = width;
         this.fps = fps;
     }
 
-    static AnimationParameters getInstance(){
-        return new AnimationParameters();
-    }
-
-    public String getVideoFormat() {
-        return videoFormat;
-    }
-
-    public int getHeight() {
-        return height;
+    public AnimationParameters getAnimation(){
+        return this;
     }
 
     public int getWidth() {
         return width;
     }
 
+    public int getHeight() {
+        return height;
+    }
+
     public int getFps() {
         return fps;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setFps(int fps) {
+        this.fps = fps;
     }
 
     //todo: Добавить поддерживаемые форматы видео для клипа, ещё что-то
